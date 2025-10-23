@@ -1,0 +1,98 @@
+[
+  {
+    "id": 0,
+    "adı": "Aronyalı İncir Ezmesi 290 gr",
+    "kategori": "Ezme",
+    "fiyatı": 500,
+    "açıklama": "Doğru zamanda hasat edilen taze aronya meyvelerinden üretilmiştir. Kaynatma işlemi yapılmadan, son teknoloji vakumlu kazanlarda, bütün aronya meyvesi kullanılarak hazırlanmıştır. Böylece, meyve içerisindeki enerji ve besin değerleri kaybolmamıştır. Şekersiz, koruyucusuz ve katkısız olan bu doğal ürün, net %70 oranında aronya meyvesi içerir. Kahvaltılara, ara öğünlere veya günlük alışkanlıklarınıza sağlıklı bir dokunuş katmak için ideal bir seçenektir. Çocuklar ve yetişkinler için uygundur; özellikle vitamin ve mineral desteğine ihtiyaç duyanlar için besleyici bir alternatiftir. 1 tatlı kaşığı ürünü, 1 bardak sıcak veya soğuk suyla karıştırarak içecek olarak da tüketebilirsiniz.",
+    "resim": "https://draronia.com/wp-content/uploads/2025/02/aronya-ezmesi-incirli.jpg",
+    "stok": "14",
+    "etiketler": ["Ezme","İncir"],
+    "puan": 4.4,
+    "miktar": "290 gr"
+  },
+  {
+    "id": 1,
+    "adı": "Aronyalı Sütlü Draje 120 gr",
+    "kategori": "Draje",
+    "fiyatı": 550,
+    "açıklama": "Aronya kuruları, kaliteli Belçika çikolatasıyla kaplanmış ve meyvenin doğal lezzetini koruyarak mükemmel bir tat dengesi sağlanmıştır. Tatlı ve çikolata severlerin favorisi bu drajeler, özellikle kahve yanında keyifle tüketilebilecek mükemmel bir atıştırmalıktır. Beyaz, sütlü ve bitter çikolata alternatifleriyle, damak zevkinize uygun farklı seçenekler sunar.",
+    "resim": "https://draronia.com/wp-content/uploads/2025/02/aronyali-sutlu-draje.jpg",
+    "stok": "78",
+    "etiketler": ["Draje","Çikolata"],
+    "puan": 5,
+    "miktar": "120 gr"
+  },
+  {
+    "id": 2,
+    "adı": "Aronyalı Türk Kahvesi 100 gr",
+    "kategori": "Kahve",
+    "fiyatı": 330,
+    "açıklama": "Şifa kaynağı aronya meyvelerinin ve geleneksel Türk kahvesinin benzersiz uyumuyla hazırlanmıştır. Arabica kahve çekirdekleri, odun ateşinde kavrulduktan sonra öğütülmüş ve aronya ekstraktı ile harmanlanmıştır. Aronyanın doğal antioksidanları sayesinde kahve keyfinize sağlıklı bir dokunuş katar. Yoğun aroması ve dengeli içimiyle günün her anında keyifle tüketebilirsiniz.",
+    "resim": "https://draronia.com/wp-content/uploads/2024/09/TurkishCoffee-03-100gr-N.png",
+    "stok": "127",
+    "etiketler": ["Kahve"],
+    "puan": 4.2,
+    "miktar": "100 gr"
+  },
+  {
+    "id": 3,
+    "adı": "Aronya Tozu 100 gr",
+    "kategori": "Toz",
+    "fiyatı": 450,
+    "açıklama": "Aronya meyvesinin en doğal halinin, kurutularak öğütülmüş formudur. Günlük beslenmenize kolayca dahil edilebilir. Smoothie, içecek, yoğurt veya salata gibi öğünlerinizi zenginleştirmenin yanı sıra yemeklerinizde baharat olarak da kullanabilirsiniz. Yetişkinlerde günlük 2 tatlı kaşığı tüketilmesi önerilir.",
+    "resim": "https://draronia.com/wp-content/uploads/2024/09/AroniaExtract-N.png",
+    "stok": "82",
+    "etiketler": ["Aronya","Toz"],
+    "puan": 5,
+    "miktar": "100 gr"
+  },
+  {
+    "id": 4,
+    "adı": "Aronya Sirkesi",
+    "kategori": "Sirke",
+    "fiyatı": 670,
+    "açıklama": "Geleneksel doğal fermantasyon yöntemiyle üretilmiştir. Kapak açıldıktan sonra hava aldığı sürece tortu, renk değişimi ve sirke yüzeyinde ‘ana’ adı verilen şeffaf tabaka veya beyazlaşma oluşabilir. Bu durum bozulma belirtisi değildir, sirke kullanıma uygundur. Bu durum fermantasyonun devam ettiğini, sirkenin pastörize ve filtre edilmediğini gösterir. Aronya meyvesinin, mide ve bağırsak florasını destekleyerek, sindirim sistemine olumlu katkı sağladığı ve hücrelere mitokondri düzeyinde etki ederek enerji seviyelerini artırdığı bilinmektedir. Aronya sirkesini salata veya yemeklerde kullanarak gününüze sağlıklı bir dokunuş katabilirsiniz.",
+    "resim": "https://draronia.com/wp-content/uploads/2024/09/aronya-sirkesi-500-ml-2f51-0.jpg",
+    "stok": "255",
+    "etiketler": ["Sirke"],
+    "puan": 4.7,
+    "miktar": "500 ml"
+  },
+  {
+    "id": 5,
+    "adı": "Aronya Suyu",
+    "kategori": "Aronya Suyu",
+    "fiyatı": 900,
+    "açıklama": "Doğru zamanda hasat edilen taze aronya meyvelerinden üretilmiştir. Soğuk sıkım yöntemiyle hazırlanmış, enerji ve besin değerleri korunarak düşük ısıda pastörize edilmiştir. Şekersiz, koruyucusuz ve katkısız olan bu doğal ürün, net %100 aronya içerir. Filtresiz ve posalı yapısıyla, aronya meyvesinin tüm faydalarını korur. Güçlü antioksidan içeriğiyle bağışıklık sistemini destekler ve günlük beslenmenize sağlıklı bir katkı sağlar. Gün içinde, tok karnına 100 ml tüketebilirsiniz. Dilerseniz farklı içeceklerle karıştırarak da keyifle içebilirsiniz.",
+    "resim": "https://draronia.com/wp-content/uploads/2024/09/aronya-suyu-100-0ad564.jpg",
+    "stok": "213",
+    "etiketler": ["SU"],
+    "puan": 4.2,
+    "miktar": "500 ml"
+  },
+  {
+    "id": 6,
+    "adı": "Aronya Kurusu",
+    "kategori": "Aronya Kurusu",
+    "fiyatı": 1200,
+    "açıklama": "Düşük ısıda kurutulmuş olan aronya meyveleri sağlıklı bir atıştırmalıktır. Yüksek lif içeriğiyle sindirimi destekler ve uzun süre tok kalmanıza yardımcı olur, vitamin, mineral ve antioksidan ihtiyacınızı karşılar. Aronya kurusu, günlük enerjinizi artırmak için mükemmel bir seçenek olup, hem tatlı hem de tuzlu atıştırmalıklarınızda rahatça kullanılabilir. Salata, bowl, smoothie, kek, kurabiye ve yoğurt gibi besinlerle birlikte tüketerek öğünlerinizi zenginleştirebilirsiniz. Günlük 50g tüketilmesi tavsiye edilir.",
+    "resim": "https://draronia.com/wp-content/uploads/2024/09/kurutulmus-aronya-yeni.jpg",
+    "stok": "388",
+    "etiketler": ["Aronya","Kurutulmuş"],
+    "puan": 4.1,
+    "miktar": "250 gr"
+  },
+  {
+    "id": 7,
+    "adı": "Donmuş Aronya Meyvesi",
+    "kategori": "Donmuş Meyve",
+    "fiyatı": 2000,
+    "açıklama": "Donmuş Aronya Meyvesi (1 kg)",
+    "resim": "https://draronia.com/wp-content/uploads/2024/09/Donmus-Aronya-Meyvesi-1-kg.jpg",
+    "stok": "600",
+    "etiketler": ["Aronya","Dondurulmuş"],
+    "puan": 5,
+    "miktar": "1 kg"
+  }
+]
