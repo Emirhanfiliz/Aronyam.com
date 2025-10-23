@@ -1,0 +1,94 @@
+footer {
+    background-color: #111;
+    /* footer için koyu arka plan */
+    color: #eee;
+    padding: 40px 20px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+br {
+    height: 50px;
+
+}
+
+.footer__1 {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer__logo-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    gap: 20px;
+
+}
+
+.footer__logo-side img {
+    width: 100px;
+    margin-bottom: 10px;
+    border-right: 1px solid white;
+}
+
+.footer__logo-side p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #bbb;
+}
+
+.footer__link-side {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+}
+
+.footer__link-side ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+
+}
+
+.footer__link-side li {
+    margin: 8px 0;
+}
+
+.footer__link-side a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer__link-side a:hover {
+    color: #a53da3;
+
+}
+
+.footer__etbs img {
+    width: 100px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__copy-side {
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

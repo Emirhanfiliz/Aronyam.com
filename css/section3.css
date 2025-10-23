@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.section__3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-image: url(/Aronyam.com/images/bg2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(0, 0, 0);
+    font-family: "Open Sans", sans-serif;
+    font-size: large;
+}
+
+.numbers__right {
+    margin-top: 10px;
+}
+
+
+.numbers__title-box {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #a53da3;
+    padding: 20px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    text-align: center;
+    background: none;
+}
+
+.numbers__title-box i {
+    font-size: 30px;
+    color: #660164;
+    margin-bottom: 20px;
+}
+
+.numbers__dis {
+    justify-content: center;
+    margin-bottom: 30px;
+    display: grid;
+    align-items: center;
+
+}
+
+.numbers__titlle {
+    display: flex;
+    gap: 30px;
+}
+
+.numbers__titlle-box {
+    padding: 20px;
+
+}

@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+.section__2 {
+    font-family: "İnter", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(/Aronyam.com/images/bg2.jpg)
+}
+
+.swiper {
+    padding: 0 16px 56px;
+    box-sizing: border-box;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+
+.card-list .card-item {
+    list-style: none;
+}
+
+.card-list .card-item .card-link {
+
+    width: 400px;
+    display: block;
+    background: white;
+    padding: 12px;
+
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+
+}
+
+
+.card-list .card-item .card-link:hover {
+    border-color: #7E1140;
+}
+
+.card-list .card-link .badge {
+    color: #FFFFFF;
+    margin: 16px 0 18px;
+    background-color: #7E1140;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: fit-content;
+    border-radius: 50px;
+
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 600;
+}
+
+.card-list .card-link .card-button {
+    background-color: white;
+    border: none;
+    color: #237e11;
+    cursor: pointer;
+    border: 2px solid #217e11;
+    padding: 0px 80px;
+    transition: 0.4s ease;
+    border-radius: 10px;
+
+}
+
+.card-list .card-link:hover .card-button {
+    color: #FFFFFF;
+    background: #237e11;
+}
+
+.button-display {
+    display: flex;
+    justify-content: center;
+
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #7E1140;
+    font-weight: bold;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #7E1140
+}

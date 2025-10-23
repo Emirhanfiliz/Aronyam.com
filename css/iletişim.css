@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+}
+
+.iletisim-bg {
+    font-family: "Open Sans", sans-serif;
+    background-image: url(/Aronyam.com/images/bg2.jpg);
+
+}
+
+
+.container__map {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto 40px auto;
+}
+
+.container__touch {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 60px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 60px auto 30px auto;
+}
+
+.container_left {
+    flex: 1;
+    max-width: 400px;
+}
+
+.container_right {
+    flex: 2;
+    max-width: 600px;
+    padding: 40px;
+    background-color: #f7f9fc;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.container_right h1 {
+    font-size: 28px;
+    color: #4a148c;
+    margin-bottom: 30px;
+}
+
+.box__iletişim {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+
+.box_header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.box_header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.box_header i,
+.box_header .material-symbols-outlined {
+    font-size: 24px;
+    color: #6a1b9a;
+}
+
+.box_dis p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 15px;
+}
+
+
+.box-iletisim {
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.box-iletisim label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #4a148c;
+    margin-bottom: 8px;
+}
+
+.box-iletisim input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.box-iletisim input[type="text"]:focus {
+    border-color: #6a1b9a;
+    outline: none;
+}
+
+@media (max-width: 900px) {
+    .container__touch {
+        flex-direction: column;
+        gap: 30px;
+        align-items: stretch;
+    }
+
+    .container_left,
+    .container_right {
+        max-width: 100%;
+        flex: auto;
+    }
+
+    .container_right {
+        padding: 30px 20px;
+    }
+}

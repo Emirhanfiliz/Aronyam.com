@@ -1,0 +1,100 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    color: white;
+    background-color: white;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    height: 5vh;
+    margin: 20px 0px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    color: white;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+
+header li button {
+    padding: 10px 20px 10px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #a53da3;
+    border: 1px solid white;
+    border-radius: 18px;
+    color: white;
+    transition: all 0.3s ease;
+    font-family: "Open Sans", sans-serif;
+}
+
+header li button:hover {
+    background-color: white;
+    color: #a53da3;
+    border: 1px solid #a53da3;
+
+}
+
+header ul a {
+    color: #091a23;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+
+    transition: 0.3s ease, color 0.3s ease;
+}
+
+header ul a:hover {
+    color: #a53da3;
+
+}
+
+.alt-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Alt menü öğeleri */
+.alt-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Alt menüdeki bağlantıların hover efekti */
+.alt-menu li a:hover {
+    background-color: #f0f0f0;
+    color: #4a148c;
+}
+
+/* HOVER EFEKTİ */
+/* Ürünler li'sinin üzerine gelindiğinde alt menüyü göster */
+.urunler-liste:hover .alt-menu {
+    display: block;
+}
+
+.logo {
+    max-width: 90px;
+    height: auto;
+    display: block;
+}

@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+
+@import url(css/header.css);
+@import url(css/section2.css);
+@import url(css/section3.css);
+@import url(css/footer.css);
+@import url(css/hakkımızda.css);
+@import url(css/misyonumuz.css);
+@import url(css/ürünler.css);
+@import url(css/iletişim.css);
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section__1 {
+    min-height: 90.6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background: url(images/merle-3996951_1280.jpg) no-repeat center/cover;
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+}
+
+.section__1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+
+}
+
+.hero__caption {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 800px;
+    color: #fff;
+    z-index: 1;
+}
+
+.hero__caption-first p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #a53da3;
+    background: #fff;
+    padding: 10px 14px;
+    border-radius: 25px;
+}
+
+.hero__caption-title h1 {
+    font-size: 38px;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+.hero__caption-button {
+    margin-top: 10px;
+    padding: 12px 26px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background: #a53da3;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero__caption-button:hover {
+    background: #8e2e8c;
+    transform: scale(1.05);
+}

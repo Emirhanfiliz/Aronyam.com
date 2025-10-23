@@ -1,0 +1,140 @@
+body {
+
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: white;
+}
+
+.foto {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: calc(var(--padding) * 0.6);
+    position: relative;
+    overflow: hidden;
+    background-image: url("/Aronyam.com/images/misyon-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.foto-text {
+    position: relative;
+    display: grid;
+    gap: var(--gap);
+    padding: 28px 36px;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+    transform: translateZ(0);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border-radius: 16px;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.foto-text h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-align: right;
+    min-width: 180px;
+    cursor: default;
+    transition: transform .25s cubic-bezier(.2, .9, .2, 1), color .25s;
+    text-shadow: var(--text-shadow);
+}
+
+.foto-text h1+h1 {
+    position: relative;
+}
+
+.foto-text h1+h1::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    margin-right: 18px;
+}
+
+.foto-text h1:hover {
+    transform: translateY(-6px) scale(1.02);
+    color: #fffde7;
+}
+
+.misyonumuz-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #245677;
+}
+
+.Vizyonumuz-box {
+    background-color: #401B60;
+}
+
+.Değerlerimiz-box {
+    background-color: #367F57;
+}
+
+.misyonumuz-box__img img {
+    width: 100%;
+    display: block;
+    max-height: 600px;
+}
+
+.misyonumuz-box__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+
+}
+
+
+.misyonumuz-box__text h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.misyonumuz-box__text p {
+    color: #f0f0f0;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+@media (max-width:900px) {
+    .foto {
+        padding: 30px;
+        background-attachment: scroll;
+        min-height: 50vh;
+    }
+
+    .foto-text {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 18px;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .foto-text h1+h1::before {
+        display: none;
+    }
+}
+
+@media (max-width:420px) {
+    .foto-text h1 {
+        font-size: 18px;
+    }
+}
