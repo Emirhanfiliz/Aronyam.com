@@ -1,0 +1,31 @@
+.urunlerhtml {}
+
+#urunlerListesi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 200px;
+
+}
+
+.urun-kart {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.3s;
+}
+
+.urun-kart:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.urun-resim {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0px 0px;
+
+
+}
