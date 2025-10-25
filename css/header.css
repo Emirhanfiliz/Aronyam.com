@@ -1,13 +1,16 @@
 header {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
-    color: white;
+    padding: 10px 20px;
+    color: #091a23;
     background-color: white;
     align-items: center;
     font-family: "Open Sans", sans-serif;
-    height: 5vh;
-    margin: 20px 0px;
+    height: auto;
+    margin: 0;
+    height: 10vh;
+
+
 }
 
 header ul {
@@ -72,7 +75,7 @@ header ul a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Alt menü öğeleri */
+
 .alt-menu li a {
     display: block;
     padding: 10px 15px;
@@ -81,14 +84,12 @@ header ul a:hover {
     white-space: nowrap;
 }
 
-/* Alt menüdeki bağlantıların hover efekti */
 .alt-menu li a:hover {
     background-color: #f0f0f0;
     color: #4a148c;
 }
 
-/* HOVER EFEKTİ */
-/* Ürünler li'sinin üzerine gelindiğinde alt menüyü göster */
+
 .urunler-liste:hover .alt-menu {
     display: block;
 }

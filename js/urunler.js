@@ -4,15 +4,19 @@ fetch('../products.json')
     const urunlerListesi = document.getElementById('urunlerListesi');
 
     data.forEach(urun => {
-      const kart = document.createElement('div');
+      const kart = document.createElement('a');
       kart.classList.add('urun-kart');
+      kart.href = `/Aronyam.com/html/detay_sayfasi.html?id=${urun.id}`;
+
       kart.innerHTML = `
-      <img src="${urun.resim}" alt="${urun.adı}"class="urun-resim" >
-        <p>${urun.adı}</p>
-        <p>Kategori: ${urun.kategori}</p>
-        <p>puan${urun.puan}</p>
-        
+        <img src="${urun.resim}" alt="${urun.adı}" class="urun-resim">
+        <div class="urunler-txt">  
+          <p>${urun.adı}</p>
+          <p>Kategori: ${urun.kategori}</p>
+          <p>Puan: ${urun.puan}</p>
+        </div>
       `;
+
       urunlerListesi.appendChild(kart);
     });
   })
