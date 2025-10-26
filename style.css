@@ -80,3 +80,47 @@
     background: #8e2e8c;
     transform: scale(1.05);
 }
+
+
+@media (max-width: 768px) {
+
+    .section__1 {
+        min-height: 80vh;
+        padding: 40px 15px;
+    }
+
+    .hero__caption-title h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .hero__caption-first p {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .hero__caption-button {
+        padding: 10px 22px;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .hero__caption {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .section__1 {
+        min-height: 70vh;
+    }
+
+    .hero__caption-title h1 {
+        font-size: 24px;
+    }
+
+    .hero__caption-first p {
+        font-size: 14px;
+    }
+}

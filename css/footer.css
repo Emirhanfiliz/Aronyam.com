@@ -92,3 +92,69 @@ br {
     padding: 15px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+@media (max-width: 992px) {
+    .footer__1 {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .footer__etbs {
+        grid-column: 1 / -1;
+    }
+
+    .footer__link-side ul {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 15px 0;
+    }
+
+    .footer__1 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer__logo-side {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer__logo-side img {
+        border-right: none;
+        border-bottom: 1px solid white;
+        padding-bottom: 15px;
+        margin-bottom: 0;
+    }
+
+    .footer__link-side ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer__link-side a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__logo-side img {
+        width: 80px;
+    }
+
+    .footer__etbs img {
+        width: 80px;
+    }
+
+    .footer__logo-side p {
+        font-size: 13px;
+    }
+
+    .footer__copy-side {
+        font-size: 12px;
+    }
+}

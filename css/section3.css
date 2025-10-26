@@ -58,3 +58,70 @@
     padding: 20px;
 
 }
+
+@media (max-width: 992px) {
+    .section__3 {
+        min-height: 70vh;
+        padding: 40px 20px;
+    }
+
+    .numbers__title-box {
+        width: 170px;
+        height: 170px;
+        border-width: 2px;
+    }
+
+    .numbers__title-box i {
+        font-size: 26px;
+    }
+
+    .numbers__titlle {
+        gap: 20px;
+    }
+}
+
+/* Mobil (max 768px) */
+@media (max-width: 768px) {
+    .section__3 {
+        background-attachment: scroll;
+        font-size: medium;
+    }
+
+    .numbers__titlle {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .numbers__title-box {
+        width: 150px;
+        height: 150px;
+        padding: 15px;
+    }
+
+    .numbers__title-box i {
+        font-size: 24px;
+    }
+}
+
+/* Küçük mobil (max 480px) */
+@media (max-width: 480px) {
+    .section__3 {
+        font-size: small;
+        padding: 30px 10px;
+    }
+
+    .numbers__title-box {
+        width: 130px;
+        height: 130px;
+        border-width: 2px;
+    }
+
+    .numbers__title-box i {
+        font-size: 20px;
+    }
+
+    .numbers__titlle {
+        gap: 15px;
+    }
+}
