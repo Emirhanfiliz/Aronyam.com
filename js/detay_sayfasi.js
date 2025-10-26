@@ -16,6 +16,7 @@ if (urunId !== null) {
                 document.getElementById('urunKategorisi').textContent = `Kategori: ${secilenUrun["kategori"]}`;
                 document.getElementById('urunFiyati').textContent = `Fiyat: ${secilenUrun["fiyatı"]}₺`;
                 document.getElementById('urunAciklama').textContent = secilenUrun["açıklama"];
+                document.getElementById('urunMiktar').textContent=secilenUrun["miktar"];
                 
             } else {
                 console.error('Ürün bulunamadı.');

@@ -9,15 +9,28 @@
     <link rel="stylesheet" href="/Aronyam.com/css/detay_sayfasi.css">
 </head>
 
-<body>
+<body class="detay_sayfasi">
     <div id="header"></div>
 
     <main class="urun-detay-alani">
-        <h1 id="urunAdi"></h1>
-        <img id="urunResmi" src="" alt="Ürün Resmi">
-        <p id="urunKategorisi"></p>
-        <p id="urunFiyati"></p>
-        <p id="urunAciklama"></p>
+        <div class="urun">
+            <div class="img-side">
+                <img id="urunResmi" src="" alt="Ürün Resmi">
+            </div>
+            <div class="urun-txt">
+                <p id="urunAdi"></p>
+                <p id="urunKategorisi">katagori:</p>
+                <p class="fiyat-box" id="urunFiyati"></p>
+                <p id="urunAciklama"></p>
+                <p id="urunMiktar"></p>
+                <div class="button-side">
+                    <button class="hemen">Hemen Satın al</button>
+                    <button class="sepet">Sepete Ekle</button>
+                </div>
+            </div>
+
+        </div>
+
     </main>
 
     <div id="footer"></div>

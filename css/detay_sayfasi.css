@@ -1,3 +1,107 @@
-img {
-    width: 200px;
+.detay_sayfasi {
+    background: url(/Aronyam.com/images/bg2.jpg);
+    font-family: "Poppins", sans-serif;
+    color: #222;
+    min-height: 100vh;
+}
+
+.urun-detay-alani {
+    max-width: 1200px;
+    margin: 60px auto;
+    background-color: rgba(255, 255, 255, 0.85);
+
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.urun {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.img-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-side img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.urun-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.urun-txt h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.kategori {
+    color: #555;
+}
+
+.fiyat-box {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #1a7a3b;
+}
+
+.stok {
+    font-size: 0.95rem;
+    color: #777;
+}
+
+.button-side {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button-side button {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-side .hemen {
+    background-color: #1a7a3b;
+    color: white;
+}
+
+.button-side .hemen:hover {
+    background-color: #155e2d;
+}
+
+.button-side .sepet {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+}
+
+.button-side .sepet:hover {
+    background-color: #e5e5e5;
+}
+
+.urun-alt {
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+}
+
+.urun-alt h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
 }
