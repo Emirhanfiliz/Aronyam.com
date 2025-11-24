@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "baslik": "Aronya Hasadı Başladı!",
+    "ozet": "Bu yılın ilk hasadı tamamlandı. Taze ve en yüksek antioksidan değerine sahip aronyalarımız yola çıktı!",
+    "tarih": "2025-11-20",
+    "resim": "images/duyuru-hasat.jpg",
+    "link": "duyurular.html#hasat2025"
+  },
+  {
+    "id": 3,
+    "baslik": "Sürdürülebilir Tarım Sertifikası",
+    "ozet": "Aronyam olarak sürdürülebilir tarım konusundaki çabalarımız ödüllendirildi! Detaylar için tıklayın.",
+    "tarih": "2025-10-28",
+    "resim": "images/duyuru-sertifika.jpg",
+    "link": "duyurular.html#sertifika"
+  },
+  {
+    "id": 4,
+    "baslik": "Özel Fırsat: Sepette %15 İndirim!",
+    "ozet": "Yalnızca bu hafta sonuna özel, tüm Aronya Draje ve Ezme ürünlerinde sepette ek %15 indirim fırsatı!",
+    "tarih": "2025-10-20",
+    "resim": "images/duyuru-indirim.jpg",
+    "link": "duyurular.html#indirim"
+  },
+  {
+    "id": 5,
+    "baslik": "Kargo Bedava Limitinde İndirim",
+    "ozet": "Müşteri memnuniyeti için ücretsiz kargo limitini 1000 TL'ye düşürdük. Daha az ödeyin, daha çok tadını çıkarın!",
+    "tarih": "2025-10-10",
+    "resim": "images/duyuru-kargo.jpg",
+    "link": "duyurular.html#kargo"
+  },
+  {
+    "id": 6,
+    "baslik": "Aronya Faydaları Webinarı",
+    "ozet": "Uzman diyetisyenimizle aronya meyvesinin sağlığa etkilerini konuşuyoruz. Kayıtlar başladı, yerinizi ayırtın.",
+    "tarih": "2025-09-25",
+    "resim": "images/duyuru-webinar.jpg",
+    "link": "duyurular.html#webinar"
+  },
+  {
+    "id": 7,
+    "baslik": "Bursa Toptan Satış Noktaları",
+    "ozet": "Bursa'daki yeni toptan satış noktalarımız hizmetinizde. En yakın bayimizi haritada bulun.",
+    "tarih": "2025-09-01",
+    "resim": "images/duyuru-bursa.jpg",
+    "link": "iletişim.html"
+  }
+]

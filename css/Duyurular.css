@@ -1,0 +1,112 @@
+/* Tüm Sayfa */
+.duyurular-sayfa {
+    padding: 70px 20px;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.dark .duyurular-sayfa {
+    background: #121212;
+}
+
+/* Container */
+.duyurular-sayfa-container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.duyurular-sayfa-container h1 {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+.dark .duyurular-sayfa-container h1 {
+    color: #fff;
+}
+
+/* DUYURU LİSTESİ */
+.duyuru-listesi {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* DUYURU KART */
+.duyuru-item {
+    margin-bottom: 25px;
+}
+
+.duyuru-card {
+    background: #ffffff;
+    padding: 25px 28px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid transparent;
+    transition: 0.25s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.dark .duyuru-card {
+    background: #1a1a1a;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
+}
+
+/* Hover Efekti */
+.duyuru-card:hover {
+    transform: translateY(-3px);
+    border-left: 5px solid #a53da3;
+    box-shadow: 0 6px 24px rgba(165, 61, 163, 0.25);
+}
+
+/* Tarih */
+.duyuru-tarih {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.dark .duyuru-tarih {
+    color: #bbb;
+}
+
+/* Başlık */
+.duyuru-baslik {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.dark .duyuru-baslik {
+    color: #fff;
+}
+
+/* Özet */
+.duyuru-ozet {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.dark .duyuru-ozet {
+    color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .duyuru-card {
+        padding: 18px 20px;
+    }
+
+    .duyuru-baslik {
+        font-size: 20px;
+    }
+}

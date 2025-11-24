@@ -16,11 +16,37 @@
 </head>
 
 <body>
-    <div id="header"></div>
+    <header>
+        <div class="header__nick">
+            <a href="index.html">
+                <img src="/Aronyam.com/images/logo.png" alt="" class="logo">
+            </a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul>
+            <li><a href="/Aronyam.com/html/hakkımızda.html">Hakkımızda</a></li>
+            <li><a href="/Aronyam.com/html/misyonumuz.html">Misyonumuz</a></li>
+            <li class="urunler-liste"><a href="/Aronyam.com/html/ürünler.html">Ürünler</a>
+                <ul class="alt-menu">
+                    <li><a href="/Aronyam.com/html/ürünler.html#recel">Reçel</a></li>
+                    <li><a href="/Aronyam.com/html/ürünler.html#draje">Draje</a></li>
+                    <li><a href="/Aronyam.com/html/ürünler.html#cay">Çay</a></li>
+                </ul>
+            </li>
+            <li>
+                <button id="iletişim">İletişim</button>
+            </li>
+        </ul>
+    </header>
     <section class="section__1">
         <div class="hero__caption">
             <div class="hero__caption-first">
-
 
             </div>
             <div class="hero__caption-title">
@@ -33,7 +59,8 @@
                     yanınızdayız.
                 </p>
             </div>
-            <button id="ürünler" class="hero__caption-button">Ürünlerimizi Keşfet</button>
+            <button id="ürünler" class="hero__caption-button"><a href="/Aronyam.com/html/ürünler.html">Ürünlerimizi
+                    Keşfet</a></button>
         </div>
     </section>
 
@@ -154,6 +181,33 @@
 
 
     </section>
+
+    <section class="duyurular-alani">
+        <div class="duyuru-baslik">
+            <h2>Güncel Duyurularımız</h2>
+            <a href="/Aronyam.com/html/Duyurular.html" class="daha-fazla-btn">Tüm Duyurular »</a>
+        </div>
+
+        <div class="swiper" id="duyurular-swiper">
+            <ul class="swiper-wrapper" id="duyurular-container">
+
+            </ul>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+
+    <div id="duyuru-detay-modal" class="modal">
+        <div class="modal-icerik">
+            <span class="kapat-btn" id="modal-kapat">&times;</span>
+            <h3 id="modal-baslik"></h3>
+            <p id="modal-tarih" class="tarih"></p>
+            <p id="modal-ozet"></p>
+        </div>
+    </div>
 
     <div id="footer"></div>
 
