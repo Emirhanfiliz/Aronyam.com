@@ -2,7 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('/Aronyam.com/duyurular.json')
         .then(response => response.json())
         .then(duyurular => {
+            duyurular.sort((a, b) => new Date(b.tarih) - new Date(a.tarih));
+
             const liste = document.getElementById('duyuru-listesi');
+           
             if (!liste) return;
 
             duyurular.forEach(duyuru => {
