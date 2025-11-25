@@ -3,10 +3,11 @@ fetch("../html/header.html")
     .then(data => {
         document.getElementById("header").innerHTML = data;
 
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('header ul');
+        const menuToggle   = document.querySelector('.menu-toggle');
+        const menu         = document.querySelector('header ul');
         const urunlerListe = document.querySelector('.urunler-liste');
-        const iletisimBtn = document.getElementById("iletişim");
+        const urunlerLink  = urunlerListe ? urunlerListe.querySelector('a') : null;
+        const iletisimBtn  = document.getElementById("iletişim");
 
         if (iletisimBtn) {
             iletisimBtn.addEventListener("click", function () {
@@ -14,22 +15,22 @@ fetch("../html/header.html")
             });
         }
 
-        if (menuToggle) {
+       
+        if (menuToggle && menu) {
             menuToggle.addEventListener('click', () => {
                 menu.classList.toggle('active');
                 menuToggle.classList.toggle('active');
             });
         }
 
-        if (window.innerWidth <= 768 && urunlerListe) {
-            urunlerListe.addEventListener('click', (e) => {
-                if (e.target.tagName === 'A' && e.target.parentElement === urunlerListe) {
-                    e.preventDefault();
-                    urunlerListe.classList.toggle('active');
-                }
+        
+        if (window.innerWidth <= 768 && urunlerListe && urunlerLink) {
+            urunlerLink.addEventListener('click', (e) => {
+                e.preventDefault();           urunlerListe.classList.toggle('active'); 
             });
         }
 
+        // Header dışına tıklayınca menüyü kapat
         document.addEventListener('click', (e) => {
             if (!e.target.closest('header') && menu) {
                 menu.classList.remove('active');

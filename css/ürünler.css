@@ -19,6 +19,7 @@
     transition: transform 0.3s ease;
     overflow: hidden;
     cursor: pointer;
+    max-width: 300px;
 }
 
 .urun-kart:hover {

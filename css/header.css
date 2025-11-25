@@ -175,13 +175,15 @@ header ul a:hover {
         padding-left: 20px;
     }
 
+    .urunler-liste:hover .alt-menu {
+        display: none;
+    }
+
     .urunler-liste.active .alt-menu {
         display: block;
     }
 
-    .urunler-liste:hover .alt-menu {
-        display: none;
-    }
+
 
     .urunler-liste>a::after {
         content: ' ▼';

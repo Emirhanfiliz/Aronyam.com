@@ -3,7 +3,25 @@ fetch('../products.json')
   .then(data => {
     const urunlerListesi = document.getElementById('urunlerListesi');
 
-    data.forEach(urun => {
+   
+    const hash = window.location.hash.replace('#', ''); 
+    let gosterilecekUrunler = data;
+
+    if (hash) {
+      gosterilecekUrunler = data.filter(urun =>
+        Array.isArray(urun.etiketler) && urun.etiketler.includes(hash)
+      );
+    }
+
+    urunlerListesi.innerHTML = '';
+
+    if (gosterilecekUrunler.length === 0) {
+      urunlerListesi.innerHTML = `<p style="color:white;">Bu kategoriye ait ürün bulunamadı.</p>`;
+      return;
+    }
+
+   
+    gosterilecekUrunler.forEach(urun => {
       const kart = document.createElement('a');
       kart.classList.add('urun-kart');
       kart.href = `/Aronyam.com/html/detay_sayfasi.html?id=${urun.id}`;

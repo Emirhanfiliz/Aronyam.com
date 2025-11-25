@@ -88,13 +88,14 @@
 .button-display {
     display: flex;
     justify-content: center;
-
 }
+
 
 .swiper-button-next,
 .swiper-button-prev {
     color: #7E1140;
     font-weight: bold;
+
 }
 
 .swiper-pagination-bullet-active {
