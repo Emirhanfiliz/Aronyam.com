@@ -1,13 +1,13 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #0b0b10;
-    color: #f5f5f5;
+    background: #f6f6f9;
+    color: #222;
 }
 
 .admin-container {
@@ -16,56 +16,57 @@ body {
 }
 
 .admin-sidebar {
-    width: 240px;
-    background: #050509;
-    border-right: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 24px 18px;
+    width: 235px;
+    background: #ffffff;
+    border-right: 1px solid #e4e4e7;
+    padding: 22px 18px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 20px;
+    color: #2a2a2a;
+    margin-bottom: 16px;
+    letter-spacing: 0.3px;
 }
 
 .tab-btn {
     border: none;
     background: transparent;
-    color: #d0d0d0;
-    padding: 10px 14px;
+    color: #4c4c4c;
+    padding: 9px 13px;
     text-align: left;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 15px;
-    transition: 0.2s;
+    font-size: 14px;
+    transition: 0.15s ease;
 }
 
 .tab-btn.active {
-    background: linear-gradient(135deg, #a53da3, #f06bc7);
-    color: #ffffff;
+    background: #7f56d9;
+    color: #fff;
 }
 
 .tab-btn:hover:not(.active) {
-    background: rgba(255, 255, 255, 0.04);
+    background: #f1f1f7;
 }
 
 .admin-main {
     flex: 1;
-    padding: 30px 40px;
+    padding: 26px 34px;
 }
 
 .admin-main h1 {
-    font-size: 26px;
-    margin-bottom: 25px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .admin-main h2 {
-    font-size: 20px;
-    margin: 30px 0 12px;
+    font-size: 18px;
+    margin: 24px 0 10px;
 }
 
 .tab-content {
@@ -77,124 +78,129 @@ body {
 }
 
 .admin-form {
-    background: rgba(15, 15, 25, 0.96);
-    border-radius: 16px;
-    padding: 20px 22px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px;
+    border: 1px solid #e4e4e7;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .form-row {
     display: flex;
-    gap: 16px;
+    gap: 12px;
 }
 
 .form-group {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
 }
 
 label {
-    font-size: 14px;
-    color: #bbbbbb;
+    font-size: 13px;
+    color: #555;
 }
 
 input,
 textarea {
-    background: #131320;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: #f5f5f5;
-    padding: 9px 11px;
+    background: #fafafa;
+    border-radius: 8px;
+    border: 1px solid #d9d9df;
+    color: #333;
+    padding: 8px 10px;
     font-size: 14px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9a9aa3;
 }
 
 input:focus,
 textarea:focus {
     outline: none;
-    border-color: #a53da3;
+    border-color: #7f56d9;
+    box-shadow: 0 0 0 1px rgba(127, 86, 217, 0.25);
 }
 
 .primary-btn {
     align-self: flex-start;
-    padding: 9px 20px;
+    padding: 8px 18px;
     border-radius: 999px;
     border: none;
-    background: linear-gradient(135deg, #a53da3, #f06bc7);
+    background: #7f56d9;
     color: #ffffff;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     cursor: pointer;
-    margin-top: 6px;
-    transition: 0.2s;
-}
-
-.primary-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(240, 107, 199, 0.35);
+    margin-top: 5px;
+    transition: 0.15s ease;
 }
 
 .table-wrapper {
-    margin-top: 10px;
-    background: rgba(15, 15, 25, 0.96);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    margin-top: 12px;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e4e4e7;
     overflow: hidden;
 }
 
 .admin-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .admin-table thead {
-    background: rgba(255, 255, 255, 0.03);
+    background: #f2f2f6;
 }
 
 .admin-table th,
 .admin-table td {
-    padding: 10px 14px;
+    padding: 9px 12px;
     text-align: left;
 }
 
 .admin-table tbody tr:nth-child(even) {
-    background: rgba(255, 255, 255, 0.02);
+    background: #fafafa;
+}
+
+.admin-table tbody tr:hover {
+    background: #f2f2f8;
 }
 
 .delete-btn {
-    padding: 4px 10px;
+    padding: 4px 9px;
     border-radius: 999px;
     border: none;
-    background: rgba(255, 66, 100, 0.15);
-    color: #ff6680;
+    background: rgba(255, 45, 78, 0.13);
+    color: #d72649;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .json-output {
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 .json-output h3 {
-    font-size: 15px;
-    margin-bottom: 8px;
+    font-size: 14px;
+    margin-bottom: 6px;
 }
 
 .json-output textarea {
     width: 100%;
-    min-height: 160px;
-    background: #050509;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: #f5f5f5;
-    padding: 10px 12px;
+    min-height: 150px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e2e2e7;
+    color: #333;
+    padding: 9px 11px;
     font-family: "JetBrains Mono", Consolas, monospace;
-    font-size: 13px;
+    font-size: 12px;
     resize: vertical;
 }
 
@@ -207,10 +213,13 @@ textarea:focus {
         width: 100%;
         flex-direction: row;
         align-items: center;
+        gap: 8px;
+        padding: 12px;
+        overflow-x: auto;
     }
 
     .admin-main {
-        padding: 20px;
+        padding: 18px;
     }
 
     .form-row {

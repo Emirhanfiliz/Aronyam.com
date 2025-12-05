@@ -3,20 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aronyam Admin Paneli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Aronyam.com/css/admin.css">
 </head>
 
 <body>
     <div class="admin-container">
+
         <aside class="admin-sidebar">
             <div class="logo">Aronyam Admin</div>
+
             <button class="tab-btn active" data-tab="duyurular">Duyurular</button>
             <button class="tab-btn" data-tab="urunler">Ürünler</button>
         </aside>
 
         <main class="admin-main">
+
             <section id="tab-duyurular" class="tab-content active">
                 <h1>Duyurular Yönetimi</h1>
 
@@ -26,6 +29,7 @@
                             <label for="duyuru-baslik">Başlık</label>
                             <input type="text" id="duyuru-baslik" required>
                         </div>
+
                         <div class="form-group">
                             <label for="duyuru-tarih">Tarih</label>
                             <input type="date" id="duyuru-tarih" required>
@@ -39,19 +43,21 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="duyuru-resim">Resim Yolu</label>
-                            <input type="text" id="duyuru-resim" placeholder="images/duyuru-hasat.jpg">
+                            <label for="duyuru-resim">Resim yolu</label>
+                            <input id="duyuru-resim" type="text" placeholder="images/duyuru-hasat.jpg">
                         </div>
+
                         <div class="form-group">
-                            <label for="duyuru-link">Link</label>
-                            <input type="text" id="duyuru-link" placeholder="duyurular.html#hasat2025">
+                            <label for="duyuru-link">Detay linki</label>
+                            <input id="duyuru-link" type="text" placeholder="duyurular.html#hasat2025">
                         </div>
                     </div>
 
-                    <button type="submit" class="primary-btn">Duyuru Ekle</button>
+                    <button type="submit" class="primary-btn">Duyuru ekle</button>
                 </form>
 
-                <h2>Mevcut Duyurular</h2>
+                <h2>Mevcut duyurular</h2>
+
                 <div class="table-wrapper">
                     <table class="admin-table" id="duyuru-table">
                         <thead>
@@ -68,8 +74,8 @@
 
                 <div class="json-output">
                     <h3>Güncel duyurular.json</h3>
-                    <textarea id="duyuru-json" title="Güncel duyurular JSON"
-                        placeholder="Duyurular JSON burada görünecek." readonly></textarea>
+                    <textarea id="duyuru-json" readonly title="Güncel duyurular JSON"
+                        placeholder="Duyurular JSON burada görünecek."></textarea>
                 </div>
             </section>
 
@@ -79,34 +85,37 @@
                 <form id="urun-form" class="admin-form">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="urun-ad">Ürün Adı</label>
-                            <input type="text" id="urun-ad" required>
+                            <label for="urun-ad">Ürün adı</label>
+                            <input id="urun-ad" type="text" required>
                         </div>
+
                         <div class="form-group">
                             <label for="urun-kategori">Kategori</label>
-                            <input type="text" id="urun-kategori" required>
+                            <input id="urun-kategori" type="text" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
                             <label for="urun-fiyat">Fiyat (₺)</label>
-                            <input type="number" id="urun-fiyat" step="0.01" required>
+                            <input id="urun-fiyat" type="number" step="0.01" required>
                         </div>
+
                         <div class="form-group">
                             <label for="urun-stok">Stok</label>
-                            <input type="number" id="urun-stok" required>
+                            <input id="urun-stok" type="number" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
                             <label for="urun-puan">Puan</label>
-                            <input type="number" id="urun-puan" step="0.1" value="0">
+                            <input id="urun-puan" type="number" step="0.1" value="0">
                         </div>
+
                         <div class="form-group">
                             <label for="urun-miktar">Miktar</label>
-                            <input type="text" id="urun-miktar" placeholder="500 ml">
+                            <input id="urun-miktar" type="text" placeholder="500 ml">
                         </div>
                     </div>
 
@@ -117,18 +126,19 @@
 
                     <div class="form-group">
                         <label for="urun-resim">Resim URL</label>
-                        <input type="text" id="urun-resim" required>
+                        <input id="urun-resim" type="text" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="urun-etiketler">Etiketler (virgülle ayır)</label>
-                        <input type="text" id="urun-etiketler" placeholder="SU, KATKISIZ">
+                        <label for="urun-etiketler">Etiketler</label>
+                        <input id="urun-etiketler" type="text" placeholder="SU...">
                     </div>
 
-                    <button type="submit" class="primary-btn">Ürün Ekle</button>
+                    <button type="submit" class="primary-btn">Ürün ekle</button>
                 </form>
 
-                <h2>Mevcut Ürünler</h2>
+                <h2>Mevcut ürünler</h2>
+
                 <div class="table-wrapper">
                     <table class="admin-table" id="urun-table">
                         <thead>
@@ -146,10 +156,11 @@
 
                 <div class="json-output">
                     <h3>Güncel product.json</h3>
-                    <textarea id="urun-json" title="Güncel product JSON" placeholder="Ürünler JSON burada görünecek."
-                        readonly></textarea>
+                    <textarea id="urun-json" readonly title="Güncel product JSON"
+                        placeholder="Ürünler JSON burada görünecek."></textarea>
                 </div>
             </section>
+
         </main>
     </div>
 

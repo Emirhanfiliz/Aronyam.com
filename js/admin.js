@@ -5,23 +5,33 @@ function initTabs() {
     const buttons = document.querySelectorAll(".tab-btn");
     const tabs = document.querySelectorAll(".tab-content");
 
-    buttons.forEach(btn => {
+    if (!buttons.length || !tabs.length) return;
+
+    buttons.forEach((btn) => {
         btn.addEventListener("click", () => {
-            buttons.forEach(b => b.classList.remove("active"));
-            tabs.forEach(t => t.classList.remove("active"));
+            buttons.forEach((b) => b.classList.remove("active"));
+            tabs.forEach((t) => t.classList.remove("active"));
+
             btn.classList.add("active");
-            const target = btn.getAttribute("data-tab");
-            const tabEl = document.getElementById("tab-" + target);
-            if (tabEl) tabEl.classList.add("active");
+
+            const hedef = btn.getAttribute("data-tab");
+            const aktifTab = document.getElementById("tab-" + hedef);
+            if (aktifTab) {
+                aktifTab.classList.add("active");
+            }
         });
     });
 }
 
 function loadDuyurular() {
     fetch("/Aronyam.com/duyurular.json")
-        .then(r => r.json())
-        .then(data => {
-            duyurularData = Array.isArray(data) ? data : [];
+        .then((res) => res.json())
+        .then((data) => {
+            if (Array.isArray(data)) {
+                duyurularData = data;
+            } else {
+                duyurularData = [];
+            }
             renderDuyurular();
         })
         .catch(() => {
@@ -32,9 +42,13 @@ function loadDuyurular() {
 
 function loadUrunler() {
     fetch("/Aronyam.com/products.json")
-        .then(r => r.json())
-        .then(data => {
-            urunlerData = Array.isArray(data) ? data : [];
+        .then((res) => res.json())
+        .then((data) => {
+            if (Array.isArray(data)) {
+                urunlerData = data;
+            } else {
+                urunlerData = [];
+            }
             renderUrunler();
         })
         .catch(() => {
@@ -46,18 +60,29 @@ function loadUrunler() {
 function renderDuyurular() {
     const tbody = document.querySelector("#duyuru-table tbody");
     const jsonArea = document.getElementById("duyuru-json");
+
     if (!tbody || !jsonArea) return;
 
     tbody.innerHTML = "";
 
-    duyurularData.forEach(item => {
+    duyurularData.forEach((duyuru) => {
         const tr = document.createElement("tr");
+
+        const tarihMetin = duyuru.tarih
+            ? new Date(duyuru.tarih).toLocaleDateString("tr-TR")
+            : "";
+
         tr.innerHTML = `
-            <td>${item.id}</td>
-            <td>${item.tarih ? new Date(item.tarih).toLocaleDateString("tr-TR") : ""}</td>
-            <td>${item.baslik || ""}</td>
-            <td><button class="delete-btn" data-type="duyuru" data-id="${item.id}">Sil</button></td>
+            <td>${duyuru.id}</td>
+            <td>${tarihMetin}</td>
+            <td>${duyuru.baslik || ""}</td>
+            <td>
+                <button class="delete-btn" data-type="duyuru" data-id="${duyuru.id}">
+                    Sil
+                </button>
+            </td>
         `;
+
         tbody.appendChild(tr);
     });
 
@@ -67,22 +92,30 @@ function renderDuyurular() {
 function renderUrunler() {
     const tbody = document.querySelector("#urun-table tbody");
     const jsonArea = document.getElementById("urun-json");
+
     if (!tbody || !jsonArea) return;
 
     tbody.innerHTML = "";
 
-    urunlerData.forEach(item => {
-        const ad = item.adı || item.ad || item.name || "";
-        const fiyat = item.fiyatı != null ? item.fiyatı : (item.fiyat != null ? item.fiyat : (item.price != null ? item.price : ""));
-        const stok = item.stok != null ? item.stok : "";
+    urunlerData.forEach((urun) => {
         const tr = document.createElement("tr");
+
+        const ad = urun.adı || urun.ad || "";
+        const fiyat = urun.fiyatı != null ? urun.fiyatı : "";
+        const stok = urun.stok != null ? urun.stok : "";
+
         tr.innerHTML = `
-            <td>${item.id}</td>
+            <td>${urun.id}</td>
             <td>${ad}</td>
             <td>${fiyat}</td>
             <td>${stok}</td>
-            <td><button class="delete-btn" data-type="urun" data-id="${item.id}">Sil</button></td>
+            <td>
+                <button class="delete-btn" data-type="urun" data-id="${urun.id}">
+                    Sil
+                </button>
+            </td>
         `;
+
         tbody.appendChild(tr);
     });
 
@@ -90,17 +123,24 @@ function renderUrunler() {
 }
 
 function getNextId(list) {
-    if (!list.length) return 1;
-    const ids = list.map(x => parseInt(x.id, 10) || 0);
-    const maxId = Math.max(...ids);
-    return maxId + 1;
+    if (!list || list.length === 0) return 1;
+
+    let max = 0;
+    list.forEach((item) => {
+        const num = parseInt(item.id, 10);
+        if (!isNaN(num) && num > max) {
+            max = num;
+        }
+    });
+
+    return max + 1;
 }
 
 function initDuyuruForm() {
     const form = document.getElementById("duyuru-form");
     if (!form) return;
 
-    form.addEventListener("submit", e => {
+    form.addEventListener("submit", (e) => {
         e.preventDefault();
 
         const baslikInput = document.getElementById("duyuru-baslik");
@@ -115,9 +155,11 @@ function initDuyuruForm() {
         const resim = resimInput.value.trim();
         const link = linkInput.value.trim();
 
-        if (!baslik || !tarih || !ozet) return;
+        if (!baslik || !tarih || !ozet) {
+            return;
+        }
 
-        const newItem = {
+        const yeniDuyuru = {
             id: getNextId(duyurularData),
             baslik: baslik,
             ozet: ozet,
@@ -126,7 +168,7 @@ function initDuyuruForm() {
             link: link
         };
 
-        duyurularData.push(newItem);
+        duyurularData.push(yeniDuyuru);
         renderDuyurular();
 
         baslikInput.value = "";
@@ -141,7 +183,7 @@ function initUrunForm() {
     const form = document.getElementById("urun-form");
     if (!form) return;
 
-    form.addEventListener("submit", e => {
+    form.addEventListener("submit", (e) => {
         e.preventDefault();
 
         const adInput = document.getElementById("urun-ad");
@@ -156,19 +198,28 @@ function initUrunForm() {
 
         const ad = adInput.value.trim();
         const kategori = kategoriInput.value.trim();
-        const fiyat = Number(fiyatInput.value);
-        const stok = Number(stokInput.value);
-        const puan = puanInput.value ? Number(puanInput.value) : 0;
+        const fiyatDeger = fiyatInput.value;
+        const stokDeger = stokInput.value;
+        const puanDeger = puanInput.value;
         const miktar = miktarInput.value.trim();
         const aciklama = aciklamaInput.value.trim();
         const resim = resimInput.value.trim();
         const etiketlerText = etiketlerInput.value.trim();
 
-        if (!ad || !kategori || !aciklama || !resim || isNaN(fiyat) || isNaN(stok)) return;
+        const fiyat = Number(fiyatDeger);
+        const stok = Number(stokDeger);
+        const puan = puanDeger ? Number(puanDeger) : 0;
 
-        const etiketler = etiketlerText
-            ? etiketlerText.split(",").map(x => x.trim()).filter(x => x.length > 0)
-            : [];
+        if (!ad || !kategori || !aciklama || !resim) return;
+        if (isNaN(fiyat) || isNaN(stok)) return;
+
+        let etiketler = [];
+        if (etiketlerText) {
+            etiketler = etiketlerText
+                .split(",")
+                .map((x) => x.trim())
+                .filter((x) => x.length > 0);
+        }
 
         const yeniUrun = {
             id: getNextId(urunlerData),
@@ -192,19 +243,25 @@ function initUrunForm() {
 }
 
 function initDeleteHandlers() {
-    document.addEventListener("click", e => {
-        const btn = e.target;
-        if (!btn.classList.contains("delete-btn")) return;
+    document.addEventListener("click", (e) => {
+        const target = e.target;
+        if (!target.classList || !target.classList.contains("delete-btn")) return;
 
-        const type = btn.getAttribute("data-type");
-        const id = parseInt(btn.getAttribute("data-id"), 10);
+        const type = target.getAttribute("data-type");
+        const idText = target.getAttribute("data-id");
+        const id = parseInt(idText, 10);
+
         if (isNaN(id)) return;
 
         if (type === "duyuru") {
-            duyurularData = duyurularData.filter(x => parseInt(x.id, 10) !== id);
+            duyurularData = duyurularData.filter((item) => {
+                return parseInt(item.id, 10) !== id;
+            });
             renderDuyurular();
         } else if (type === "urun") {
-            urunlerData = urunlerData.filter(x => parseInt(x.id, 10) !== id);
+            urunlerData = urunlerData.filter((item) => {
+                return parseInt(item.id, 10) !== id;
+            });
             renderUrunler();
         }
     });
