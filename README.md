@@ -4,36 +4,36 @@ Aronyam, aronya meyvesi ve aronya bazlı ürünlerin tanıtımı için geliştir
 
 ---
 
-## 🚀 Özellikler
+## Özellikler
 
-### 🎨 Özgün Tasarım
+### Özgün Tasarım
 - Kendi tasarlanmış modern arayüz
 - Mobil uyumlu 
 - Hero alanı
 - Sayaçlar, ürün kartları, özel bölümler
 
 
-### 📦 JSON Tabanlı Ürün Sistemi
+### JSON Tabanlı Ürün Sistemi
 - `products.json` üzerinden ürün listeleme
 - Ürün detay sayfasında dinamik veri gösterimi
 - Ürün adı, fiyat, açıklama, stok ve görsel desteği
 
-### 📢 Duyurular Sistemi
+### Duyurular Sistemi
 - `duyurular.json` üzerinden duyuru listeleme
 - JSON canlı önizleme sistemi
 
-### 🛠 Admin Paneli
+###  Admin Paneli
 - Duyuru ekleme
 - Duyuru silme
 - Ürün ekleme altyapısı
 - JSON çıktısı görüntüleme
 
-### 📱 Responsive Tasarım
+### Responsive Tasarım
 - Tüm ekran boyutlarına uygun
 - Flexbox & Grid yapısı
 ---
 
-## 🧱 Kullanılan Teknolojiler
+##  Kullanılan Teknolojiler
 
 - **HTML5**
 - **CSS3** (Flexbox, Grid)
@@ -42,7 +42,7 @@ Aronyam, aronya meyvesi ve aronya bazlı ürünlerin tanıtımı için geliştir
 
 ---
 
-## 📌 Site Haritası (Sitemap)
+##  Site Haritası (Sitemap)
 
 Aşağıda Aronyam web sitesinin genel sayfa yapısı gösterilmektedir:
 
