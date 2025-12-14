@@ -20,6 +20,7 @@
 
         <main class="admin-main">
 
+            <!-- DUYURULAR -->
             <section id="tab-duyurular" class="tab-content active">
                 <h1>Duyurular Yönetimi</h1>
 
@@ -73,7 +74,15 @@
                 </div>
 
                 <div class="json-output">
-                    <h3>Güncel duyurular.json</h3>
+                    <div style="display:flex; gap:10px; align-items:center; justify-content:space-between;">
+                        <h3 style="margin:0;">Güncel duyurular.json</h3>
+
+                        <button id="download-duyurular" class="primary-btn" type="button"
+                            style="padding:10px 14px; font-size:14px;">
+                            JSON indir
+                        </button>
+                    </div>
+
                     <textarea id="duyuru-json" readonly title="Güncel duyurular JSON"
                         placeholder="Duyurular JSON burada görünecek."></textarea>
                 </div>
@@ -131,7 +140,7 @@
 
                     <div class="form-group">
                         <label for="urun-etiketler">Etiketler</label>
-                        <input id="urun-etiketler" type="text" placeholder="SU...">
+                        <input id="urun-etiketler" type="text" placeholder="örn: doğal, şekersiz, vegan">
                     </div>
 
                     <button type="submit" class="primary-btn">Ürün ekle</button>
@@ -155,8 +164,17 @@
                 </div>
 
                 <div class="json-output">
-                    <h3>Güncel product.json</h3>
-                    <textarea id="urun-json" readonly title="Güncel product JSON"
+                    <div style="display:flex; gap:10px; align-items:center; justify-content:space-between;">
+
+                        <h3 style="margin:0;">Güncel products.json</h3>
+
+                        <button id="download-urunler" class="primary-btn" type="button"
+                            style="padding:10px 14px; font-size:14px;">
+                            JSON indir
+                        </button>
+                    </div>
+
+                    <textarea id="urun-json" readonly title="Güncel products JSON"
                         placeholder="Ürünler JSON burada görünecek."></textarea>
                 </div>
             </section>
@@ -164,7 +182,42 @@
         </main>
     </div>
 
+
     <script src="/Aronyam.com/js/admin.js"></script>
+
+
+    <script>
+        function downloadJson(filename, text) {
+            const blob = new Blob([text], { type: "application/json;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const dBtn = document.getElementById("download-duyurular");
+            const uBtn = document.getElementById("download-urunler");
+
+            if (dBtn) {
+                dBtn.addEventListener("click", () => {
+                    const val = document.getElementById("duyuru-json")?.value || "[]";
+                    downloadJson("duyurular.json", val);
+                });
+            }
+
+            if (uBtn) {
+                uBtn.addEventListener("click", () => {
+                    const val = document.getElementById("urun-json")?.value || "[]";
+                    downloadJson("products.json", val);
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

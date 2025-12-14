@@ -1,35 +1,45 @@
-document.addEventListener('DOMContentLoaded', function () {
-    fetch('/Aronyam.com/duyurular.json')
-        .then(response => response.json())
-        .then(duyurular => {
-            duyurular.sort((a, b) => new Date(b.tarih) - new Date(a.tarih));
+document.addEventListener("DOMContentLoaded", async () => {
+  const liste = document.getElementById("duyuru-listesi");
+  if (!liste) return;
 
-            const liste = document.getElementById('duyuru-listesi');
-           
-            if (!liste) return;
+  async function loadData() {
+    const cached = localStorage.getItem("aronyam_duyurular_v1");
+    if (cached) {
+      try {
+        const arr = JSON.parse(cached);
+        if (Array.isArray(arr)) return arr;
+      } catch {}
+    }
 
-            duyurular.forEach(duyuru => {
-                const anchorId = duyuru.link && duyuru.link.includes('#')
-                    ? duyuru.link.split('#')[1]
-                    : 'duyuru-' + duyuru.id;
+    const res = await fetch("/Aronyam.com/duyurular.json");
+    const data = await res.json();
+    return Array.isArray(data) ? data : [];
+  }
 
-                const li = document.createElement('li');
-                li.className = 'duyuru-item';
-                li.id = anchorId;
+  const duyurular = await loadData();
 
-                li.innerHTML = `
-                    <article class="duyuru-card">
-                        <span class="duyuru-tarih">
-                            ${new Date(duyuru.tarih).toLocaleDateString('tr-TR')}
-                        </span>
-                        <h2 class="duyuru-baslik">${duyuru.baslik}</h2>
-                        <p class="duyuru-ozet">${duyuru.ozet}</p>
-                    </article>
-                `;
+  liste.innerHTML = "";
 
-                liste.appendChild(li);
-            });
-        })
-        .catch(error => console.error('Duyurular yüklenirken hata:', error));
+  duyurular
+    .sort((a, b) => new Date(b.tarih) - new Date(a.tarih))
+    .forEach((d) => {
+      const id =
+        d.link && String(d.link).includes("#")
+          ? String(d.link).split("#")[1]
+          : "duyuru-" + d.id;
+
+      const li = document.createElement("li");
+      li.className = "duyuru-item";
+      li.id = id;
+
+      li.innerHTML = `
+        <article class="duyuru-card">
+          <span class="duyuru-tarih">${new Date(d.tarih).toLocaleDateString("tr-TR")}</span>
+          <h2 class="duyuru-baslik">${d.baslik || ""}</h2>
+          <p class="duyuru-ozet">${d.ozet || ""}</p>
+        </article>
+      `;
+
+      liste.appendChild(li);
+    });
 });
-
